@@ -5,7 +5,10 @@ RUN apt-get update && apt-get install -y git imagemagick gettext-base
 RUN a2enmod rewrite
 RUN docker-php-ext-install mysqli exif
 
-RUN git clone --recurse-submodules --single-branch https://github.com/omeka/Omeka.git /var/www/html
+RUN git clone --recurse-submodules \
+  --single-branch --branch v3.0.1 \
+  https://github.com/omeka/Omeka.git \
+  /var/www/html
 
 RUN mv application/config/config.ini.changeme /var/www/html/application/config/config.ini
 RUN mv .htaccess.changeme .htaccess
