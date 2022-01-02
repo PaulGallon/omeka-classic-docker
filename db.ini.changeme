@@ -1,0 +1,8 @@
+[database]
+host = $OMEKA_DB_HOST
+username = $OMEKA_DB_USERNAME
+password = $OMEKA_DB_PASSWORD
+dbname = $OMEKA_DB_NAME
+prefix = $OMEKA_DB_PREFIX
+charset = $OMEKA_DB_CHARSET
+port = $OMEKA_DB_PORT
